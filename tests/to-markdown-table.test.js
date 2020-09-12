@@ -9,7 +9,7 @@ function serializeHast(hast) {
   return toMarkdown(toMdast(hast));
 }
 
-describe(toMarkdownTable, () => {
+describe.skip(toMarkdownTable, () => {
   it('should return empty table for empty table or invalid nodes', () => {
     expect(toMarkdownTable(td('table'))).toEqual(serializeHast(h('table')));
     expect(toMarkdownTable(h('invalid node'))).toEqual(
