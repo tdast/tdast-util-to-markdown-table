@@ -4,7 +4,7 @@ import { Options } from 'tdast-util-to-hast-table';
 export { Options };
 
 /**
- * Serializes tdast into a markdown table
+ * Serializes tdast into a markdown table (GFM)
  **/
 export default function toMarkdownTable(
   /** A valid tdast Table node */

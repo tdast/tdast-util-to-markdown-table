@@ -1,7 +1,7 @@
 {
   "name": "tdast-util-to-markdown-table",
   "version": "0.1.1",
-  "description": "tdast utility to serialize tdast to markdown table",
+  "description": "tdast utility to serialize tdast to markdown table (GFM)",
   "license": "MIT",
   "homepage": "https://github.com/tdast/tdast-util-to-markdown-table",
   "repository": "https://github.com/tdast/tdast-util-to-markdown-table",

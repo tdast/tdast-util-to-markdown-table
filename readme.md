@@ -1,8 +1,10 @@
 # tdast-util-to-markdown-table
 
-[**tdast**][tdast] utility to serialize tdast to markdown table.
+[**tdast**][tdast] utility to serialize tdast to markdown table ([GFM][]).
 
 ---
+
+> **Note**: This package is in active development and is currently unreleased.
 
 ## Install
 
@@ -117,11 +119,10 @@ function toMarkdownTable(
 ): string;
 ```
 
-Serializes a tdast `Table` node into a markdown table.
+Serializes a tdast `Table` node into a markdown table.  Note that markdown tables are not [commonmark][]-compliant and are based on [GFM][].
 
-Uses [`tdast-util-to-hast-table`][tdast-util-to-hast-table] under the hood to transform the tdast `Table` node into a [hast][] table node, then transforms to [mdast][] via [`hast-util-to-mdast`][hast-util-to-mdast], and finally applies [`mdast-util-to-markdown`][mdast-util-to-markdown] to serialize the mdast node into a markdown string.
+Uses [`tdast-util-to-hast-table`][tdast-util-to-hast-table] under the hood to transform the tdast `Table` node into a [hast][] table node, then transforms to [mdast][] via [`hast-util-to-mdast`][hast-util-to-mdast], and finally applies [`mdast-util-to-markdown`][mdast-util-to-markdown] to serialize the mdast node into a markdown string.  For more details, please refer to [`tdast-util-to-hast-table`][tdast-util-to-hast-table] for behaviors of transformed nodes.
 
-The markdown table is [commonmark][] compilant.  For more details, please refer to [`tdast-util-to-hast-table`][tdast-util-to-hast-table] for behaviors of transformed nodes.
 
 #### Related interfaces
 ```ts
@@ -135,6 +136,7 @@ interface Options {
 [commonmark]: https://commonmark.org/
 [hast]: https://github.com/syntax-tree/hast
 [hast-util-to-mdast]: https://github.com/syntax-tree/hast-util-to-mdast
+[gfm]: https://github.github.com/gfm/
 [hastscript]: https://github.com/syntax-tree/hastscript
 [mdast]: https://github.com/syntax-tree/mdast
 [mdast-util-to-markdown]: https://github.com/syntax-tree/mdast-util-to-markdown
