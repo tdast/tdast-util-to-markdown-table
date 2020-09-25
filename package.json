@@ -38,13 +38,14 @@
   ],
   "dependencies": {
     "hast-util-to-mdast": "^7.1.1",
-    "mdast-util-to-markdown": "^0.2.0",
+    "mdast-util-gfm-table": "^0.1.2",
+    "mdast-util-to-markdown": "^0.3.2",
     "tdast-types": "^0.1.2",
     "tdast-util-to-hast-table": "^0.1.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.11.5",
-    "@types/jest": "^26.0.9",
+    "@types/jest": "^26.0.14",
     "babel-jest": "^26.2.2",
     "hastscript": "^6.0.0",
     "husky": "^4.3.0",
@@ -52,7 +53,7 @@
     "microbundle": "^0.12.3",
     "standard-version": "^9.0.0",
     "tdastscript": "^0.1.2",
-    "typescript": "^4.0.2",
+    "typescript": "^4.0.3",
     "xo": "^0.33.1"
   },
   "husky": {

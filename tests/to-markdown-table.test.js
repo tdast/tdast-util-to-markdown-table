@@ -1,15 +1,17 @@
 import h from 'hastscript';
 import toMdast from 'hast-util-to-mdast';
+import table from 'mdast-util-gfm-table';
 import toMarkdown from 'mdast-util-to-markdown';
 import td from 'tdastscript';
 
 import toMarkdownTable from '../lib/to-markdown-table';
 
 function serializeHast(hast) {
-  return toMarkdown(toMdast(hast));
+  const mdast = toMdast(hast);
+  return toMarkdown(mdast, { extensions: [table.toMarkdown()] });
 }
 
-describe.skip(toMarkdownTable, () => {
+describe(toMarkdownTable, () => {
   it('should return empty table for empty table or invalid nodes', () => {
     expect(toMarkdownTable(td('table'))).toEqual(serializeHast(h('table')));
     expect(toMarkdownTable(h('invalid node'))).toEqual(

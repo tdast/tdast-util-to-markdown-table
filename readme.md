@@ -4,14 +4,11 @@
 
 ---
 
-> **Note**: This package is in active development and is currently unreleased.
-
 ## Install
 
 ```sh
 npm install tdast-util-to-markdown-table
 ```
-
 
 ## Use
 
@@ -100,7 +97,11 @@ console.log(toMarkdownTable(tdast));
 
 yields a serialized markdown table.
 
-```md
+```
+| col0     | col1     | col2     |
+| -------- | -------- | -------- |
+| row1col0 | row1col1 | row1col2 |
+| row2col0 | row2col1 | row2col2 |
 ```
 
 Easily use this markdown table with any markdown content!
